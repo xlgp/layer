@@ -13,6 +13,7 @@ var isLayui = window.layui && layui.define, $, win, ready = {
       var js = document.scripts
       ,last = js.length - 1
       ,src;
+      if(last < 0) return "";
       for(var i = last; i > 0; i--){
         if(js[i].readyState === 'interactive'){
           src = js[i].src;
